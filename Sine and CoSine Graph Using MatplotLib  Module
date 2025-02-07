@@ -1,0 +1,32 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Generate values for x (from 0 to 2π with small steps)
+x = np.linspace(0, 2 * np.pi, 1000)
+
+# Calculate the sine and cosine values
+y_sine = np.sin(x)
+y_cosine = np.cos(x)
+
+# Create the plot
+plt.figure(figsize=(10, 6))
+
+# Plot sine wave
+plt.plot(x, y_sine, label="Sine", color='b')
+
+# Plot cosine wave
+plt.plot(x, y_cosine, label="Cosine", color='r')
+
+# Add labels and title
+plt.title("Sine and Cosine Waves")
+plt.xlabel("x (radians)")
+plt.ylabel("y")
+
+# Show grid
+plt.grid(True)
+
+# Add a legend
+plt.legend()
+
+# Display the plot
+plt.show()
